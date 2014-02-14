@@ -7,3 +7,4 @@ app/database/production.sqlite
 app/database/development.sqlite
 public/bower_components/*
 public/npm-debug.log
+bootstrap/start.php

@@ -16,7 +16,7 @@ The Panel is a webservice that allows you to curate links with a group of people
 ### Config
 
 - Rename 'start.default.php' to 'start.php' and edit the environment to your needs
-- Change config to your needs (app/config/*)
+- Change config files to your needs (app/config/*)
 
 ### Migrate database
 

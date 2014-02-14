@@ -6,12 +6,12 @@ The Panel is a webservice that allows you to curate links with a group of people
 
 ### Composer
 
-> composer install
+	> composer install
 
 ### Bower
 
-> cd public/
-> bower install
+	> cd public/
+	> bower install
 
 ### Config
 
@@ -20,14 +20,13 @@ The Panel is a webservice that allows you to curate links with a group of people
 
 ### Migrate database
 
-- Check the seed file for your first (admin) user credentials.
+Check the seed file for your first (admin) user credentials.
 
-> php artisan migrate:install
-> php artisan migrate:refresh --seed
+	> php artisan migrate:install
+	> php artisan migrate:refresh --seed
 
 Optionally, add your environment like " --env='development'"
 
 ## Todo
 
 - Change dutch text to english text
--

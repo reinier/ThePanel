@@ -15,9 +15,12 @@ The Panel is a webservice that allows you to curate links with a group of people
 
 ### Config
 
-- Configurate your environment
+- Configurate your environment in 'bootstrap/start.php'
+- Change config to your needs (app/config/*)
 
 ### Migrate database
+
+- Check the seed file for your first (admin) user credentials.
 
 > php artisan migrate:install
 > php artisan migrate:refresh --seed

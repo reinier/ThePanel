@@ -21,8 +21,8 @@ The Panel uses [composer](https://getcomposer.org) and [bower](http://bower.io) 
 
 ### Config
 
-- Rename `bootstrap/start.default.php` to `bootstrap/start.php` and edit the environment to your needs, like a development environment (`'development' => array('packer-virtualbox'),` for example)
-- Change config files to your needs (`app/config/*`) like setting up your development envirenment
+- Rename `bootstrap/start.default.php` to `bootstrap/start.php` and edit the environment to your needs, like a development environment (`'development' => array('packer-virtualbox'),` can be used with [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel))
+- Change config files to your needs (`app/config/*`) like setting up your development envirenment by adding a environment directory with specific configurations
 
 ### Migrate database
 
@@ -35,5 +35,5 @@ Optionally, add your environment to the commands like `--env='development'`
 
 ## Todo
 
-- Change dutch text to english text
-- Add things to the todo list
+- [ ] Change dutch text to english text
+- [ ] Add things to the todo list

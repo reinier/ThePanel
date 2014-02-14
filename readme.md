@@ -8,6 +8,8 @@ The Panel uses [composer](https://getcomposer.org) and [bower](http://bower.io) 
 
 ## Setup
 
+**Tip:** You can use this Vagrant setup that is specifically created for The Panel: [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel)
+
 ### Composer
 
 	composer install
@@ -19,8 +21,8 @@ The Panel uses [composer](https://getcomposer.org) and [bower](http://bower.io) 
 
 ### Config
 
-- Rename `bootstrap/start.default.php` to `bootstrap/start.php` and edit the environment to your needs
-- Change config files to your needs (`app/config/*`)
+- Rename `bootstrap/start.default.php` to `bootstrap/start.php` and edit the environment to your needs, like a development environment (`'development' => array('packer-virtualbox'),` for example)
+- Change config files to your needs (`app/config/*`) like setting up your development envirenment
 
 ### Migrate database
 

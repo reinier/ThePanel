@@ -1,5 +1,7 @@
 # The Panel
 
+See The Panel in action on [Hidiyo](http://hidiyo.com).
+
 [The Panel](http://thepanel.io) is a PHP webservice that allows you to curate links with a group of people. The links only appear in public when a certain amount of votes are being given to a link. 
 
 The Panel is built with [Laravel](http://laravel.com) and currently runs on Laravel 4.1. Knowledge of Laravel is highly recommended when setting up The Panel.

@@ -33,7 +33,9 @@ Check the seed file (`app/database/seeds/UsersTableSeeder.php`) for your first (
 
 Optionally, add your environment to the commands like `--env='development'`
 
-## Todo
+## Known issues
 
-- [ ] Change dutch text to english text
-- [ ] Add things to the todo list
+- There a lot of text in Dutch still, working on it
+- The bookmarklet doesn't do a thing when you are not logged in.
+
+For more issues and todos, visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel)

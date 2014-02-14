@@ -6,6 +6,8 @@ The Panel is built with [Laravel](http://laravel.com) and currently runs on Lara
 
 The Panel uses [composer](https://getcomposer.org) and [bower](http://bower.io) to manage all kinds of libraries. You obviously have to install composer and bower to get The Panel alive and kicking.
 
+Visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel) for todos and issues.
+
 ## Setup
 
 **Tip:** You can use this Vagrant setup that is specifically created for The Panel: [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel)

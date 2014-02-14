@@ -24,20 +24,20 @@ Visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel) for todo
 ### Config
 
 - Rename `bootstrap/start.default.php` to `bootstrap/start.php` and edit the environment to your needs, like a development environment (`'development' => array('packer-virtualbox'),` can be used with [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel))
-- Change config files to your needs (`app/config/*`) like setting up your development envirenment by adding a environment directory with specific configurations
+- Change config files to your needs (`app/config/*`) like setting up your development environment by adding an environment directory with specific configurations.
 
-### Migrate database
+### Setup database
 
 Check the seed file (`app/database/seeds/UsersTableSeeder.php`) for your first (admin) user credentials.
 
 	php artisan migrate:install
 	php artisan migrate:refresh --seed
 
-Optionally, add your environment to the commands like `--env='development'`
+Optionally, add your environment to the commands like `--env='development'` if necessary
 
 ## Known issues
 
-- There a lot of text in Dutch still, working on it
+- A lot of text is still in Dutch, working on it
 - The bookmarklet doesn't do a thing when you are not logged in.
 
 For more issues and todos, visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel)

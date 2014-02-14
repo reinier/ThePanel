@@ -10,7 +10,7 @@
 
 @section('content')
 
-	<p><em>Nog geen links beschikbaar</em></p>
+	<p><em>No links public yet</em></p>
 
 @stop
 

@@ -91,7 +91,12 @@ class MagazineController extends \BaseController {
 		    $links[] = $link;
 		}
 
+		if(empty($links)){
+			$links = '';
+		}
+
 		Cache::forever('links', $links);
+
 	}
 
 	public function get_links_frontpage()

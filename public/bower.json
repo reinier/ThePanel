@@ -1,0 +1,8 @@
+{
+    "name":  "ThePanel",
+    "version": "1",
+    "dependencies": {
+		"jquery": "latest",
+        "bootstrap": "latest"
+    }
+}

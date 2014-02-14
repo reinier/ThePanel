@@ -41,5 +41,6 @@ Optionally, add your environment to the commands like `--env='development'` if n
 
 - A lot of text is still in Dutch, working on it
 - The bookmarklet doesn't do a thing when you are not logged in.
+- I'm ([@reinier](https://twitter.com/reinier)) pretty new to this open source stuff, so one of the main reasons to open source this is to get experience with it. 
 
 For more issues and todos, visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel)

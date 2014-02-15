@@ -30,7 +30,9 @@ Visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel) for todo
 
 ### Setup database
 
-Check the seed file (`app/database/seeds/UsersTableSeeder.php`) for your first (admin) user credentials.
+Check the seed file (`app/database/seeds/UsersTableSeeder.default.php`) for your first (admin) user credentials (be sure to provide a real email address) and rename the file to `UsersTableSeeder.php`.
+
+Now run the database migrations:
 
 	php artisan migrate:install
 	php artisan migrate:refresh --seed

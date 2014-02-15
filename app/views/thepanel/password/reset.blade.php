@@ -1,11 +1,11 @@
 @extends('thepanel.layouts.master')
 
 @section('title')
-    {{ Config::get('site.title'); }} - forgot password
+    {{ Config::get('site.title'); }} - {{ Lang::get('thepanel.helpforgotpassword') }}
 @stop
 
 @section('header-title')
-	<h1>Help, I forgot my password</h1>
+	<h1>{{ Lang::get('thepanel.helpforgotpassword') }}</h1>
 @stop
 
 @section('content')
@@ -16,17 +16,17 @@
 		<input type="hidden" name="token" value="{{ $token }}">
 		
 		<div class="form-group">
-			<label for="email">Your email address</label>
+			<label for="email">{{ Lang::get('thepanel.youremail') }}</label>
 			<input class="form-control" type="email" name="email">
 		</div>
 		
 		<div class="form-group">
-			<label for="password">Your new password</label>
+			<label for="password">{{ Lang::get('thepanel.yournewpassword') }}</label>
 			<input class="form-control" type="password" name="password">
 		</div>
 		
 		<div class="form-group">
-			<label for="password_confirmation">Your new password (again)</label>
+			<label for="password_confirmation">{{ Lang::get('thepanel.yournewpasswordagain') }}</label>
 			<input class="form-control" type="password" name="password_confirmation">
 		</div>
 
@@ -34,7 +34,7 @@
 
 	<fieldset>
 		<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-		<button type="submit" class="btn btn-default">Reset password</button>
+		<button type="submit" class="btn btn-default">{{ Lang::get('thepanel.resetpassword') }}</button>
 	</fieldset>
 	</form>
 

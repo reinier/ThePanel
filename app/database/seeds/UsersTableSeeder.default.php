@@ -16,11 +16,15 @@ class UsersTableSeeder extends Seeder {
         $users[$i]['bio']            = 'No information yet';
 
         $users[$i]['publichash']     = 'hash-'.$users[$i]['username'].'-hash';
-        $users[$i]['password']       = Hash::make($users[$i]['username']);
-        $users[$i]['email']          = 'insert-real-email-here';
+        $users[$i]['password']       = Hash::make($users[$i]['username']); // The password is the same as the username
+        $users[$i]['email']          = 'insert-real-email-here'; // INSERT VALID EMAIL HERE
         $users[$i]['activated']      = 1;
         $users[$i]['created_at']     = $now;
         $users[$i]['updated_at']     = $now;
+
+        /*
+            YOU CAN ADD MORE USERS BELOW
+        */
 
         // $i++;
         // $users[$i] = array();

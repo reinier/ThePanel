@@ -7,5 +7,4 @@ return array(
 	"yournewpassword" => "Your new password",
 	"yournewpasswordagain" => "Your new password (again)",
 	"resetpassword" => "Reset password",
-	"contributors" => "Contributors to :sitetitle",
 );

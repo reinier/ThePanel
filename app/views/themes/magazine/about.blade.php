@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-
+	<!-- insert your about text here -->
 	<h3>@lang('magazine.contributors', array('sitetitle' => Config::get('site.title')))</h3>
 	<ul class="bios">
 			@foreach ($users as $user_id => $user)

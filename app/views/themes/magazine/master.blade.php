@@ -44,7 +44,7 @@
 			<footer id="footer">
 				<p>
 				@if(Auth::check())
-					<a href="/backlog">Backlog &raquo;</a>
+					<a href="/backlog/list">Backlog &raquo;</a>
 				@endif
 				@if(!Auth::check())
 					<a href="/login">Login &raquo;</a>

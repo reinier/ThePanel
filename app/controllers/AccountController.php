@@ -212,14 +212,14 @@ class AccountController extends \BaseController {
 		}
 		
 		if (Auth::attempt($userInput,$remember)) {
-			return Redirect::route('backlog')
+			return Redirect::to('backlog/list')
 				->with('status', 'You are successfully logged in.');
 		}
 
 		// Try with email address
 		if (Auth::attempt(array('email' => $userInput['username'], 'password' => $userInput['password'])))
 		{
-		    return Redirect::route('backlog')
+		    return Redirect::to('backlog/list')
 				->with('status', 'You are successfully logged in.');
 		}
         

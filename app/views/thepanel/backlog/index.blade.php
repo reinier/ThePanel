@@ -12,10 +12,10 @@
 	<p class="add-to-backlog"><a href="/backlog/add">+ Voeg handmatig een link toe</a></p>
 	<p class="sort-backlog">
 		<em>Sorteer op:</em> 
-		@if(Request::is('backlog/votes'))
-			stemmen | <a href="/backlog">binnenkomst</a>
+		@if(Request::is('backlog/list/votes'))
+			stemmen | <a href="/backlog/list">binnenkomst</a>
 		@else
-			<a href="/backlog/votes">stemmen</a> | binnenkomst
+			<a href="/backlog/list/votes">stemmen</a> | binnenkomst
 		@endif
 		
 	</p>

@@ -12,11 +12,8 @@ Route::get('activate/{publichash}', array('uses' => 'AccountController@activate'
 
 Route::group(array('before' => 'auth'), function()
 {
-	Route::get('backlog/add', array('as' => 'backlog-add', 'uses' => 'BacklogController@add'));
-	Route::post('backlog/add', array('uses' => 'BacklogController@create'));
-	Route::post('backlog/vote', array('as' => 'backlog-vote', 'uses' => 'BacklogController@vote'));
 
-	Route::get('backlog/{sort?}', array('as' => 'backlog', 'uses' => 'BacklogController@index'));
+	Route::controller('backlog','BacklogController');
 
 	Route::get('yourbookmarklet', array('as' => 'yourbookmarklet', 'uses' => 'BookmarkletController@index'));
 	Route::get('thebookmarklet', array('as' => 'thebookmarklet', 'uses' => 'BookmarkletController@source'));

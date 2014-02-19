@@ -10,7 +10,6 @@
     </title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" charset="utf-8">
 	<link rel="stylesheet" href="/themes/magazine/style/style.css" type="text/css" charset="utf-8">
-	
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -39,8 +38,6 @@
 		@endif
 
 		@yield('content')
-
-
 			<footer id="footer">
 				<p>
 				@if(Auth::check())
@@ -53,7 +50,6 @@
 			</footer>
 	</div> <!-- /container -->
 	
-
 	<script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

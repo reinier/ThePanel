@@ -10,7 +10,6 @@
     </title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="/thepanel_assets/style.css?v=3" type="text/css" media="screen" title="no title" charset="utf-8">
-	
 </head>
 <body>
 

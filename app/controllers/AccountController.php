@@ -10,6 +10,10 @@ class AccountController extends \BaseController {
 
 	**************************************/ 
 	
+	// function __construct() {
+ //        $this->beforeFilter('auth', array('except' => array('show')));
+ //    }
+
 	// POST and GET
 	public function register()
 	{

@@ -13,7 +13,7 @@
 	<h3>@lang('magazine.contributors', array('sitetitle' => Config::get('site.title')))</h3>
 	<ul class="bios">
 			@foreach ($users as $user_id => $user)
-				<li><a href="/profile/{{ $user['username'] }}">{{ $user['name'] }}</a></li>
+				<li><a href="/frontpage/profile/{{ $user['username'] }}">{{ $user['name'] }}</a></li>
 			@endforeach
 	</ul>
 @stop

@@ -1,9 +1,7 @@
 <?php
 
-Route::get('/', array('as' => 'home', 'uses' => 'MagazineController@index'));
-Route::get('/about', array('as' => 'about', 'uses' => 'MagazineController@about'));
-Route::get('/detail/{link_id}', array('as' => 'detail', 'uses' => 'MagazineController@detail'));
-Route::get('/profile/{username}', array('as' => 'profile', 'uses' => 'MagazineController@profile'));
+Route::get('/', array('as' => 'home', 'uses' => 'FrontpageController@getIndex'));
+Route::controller('frontpage','FrontpageController');
 
 Route::get('login', array('as' => 'login', 'uses' => 'AccountController@login'));
 Route::post('login', array('before' => 'csrf', 'uses' => 'AccountController@login'));
@@ -14,12 +12,9 @@ Route::group(array('before' => 'auth'), function()
 {
 
 	Route::controller('backlog','BacklogController');
-
-	Route::get('yourbookmarklet', array('as' => 'yourbookmarklet', 'uses' => 'BookmarkletController@index'));
-	Route::get('thebookmarklet', array('as' => 'thebookmarklet', 'uses' => 'BookmarkletController@source'));
+	Route::controller('bookmarklet','BookmarkletController');
 
 	Route::get('logout', array('as' => 'logout', 'uses' => 'AccountController@logout'));
-
 	Route::get('account', array('as' => 'account', 'uses' => 'AccountController@show'));
 	
 	Route::get('edit', array('as' => 'edit', 'uses' => 'AccountController@edit'));

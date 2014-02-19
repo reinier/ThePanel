@@ -98,7 +98,7 @@ class BacklogController extends \BaseController {
 			if(!empty($check_link[0]))
 			{
 				$flash_error[] = 'Link already exsists';
-				return Redirect::route('backlog')
+				return Redirect::to('/backlog')
 				->with('error', '<ul><li>'.implode('</li><li>',$flash_error).'</li></ul>');
 			}
 
@@ -154,7 +154,7 @@ class BacklogController extends \BaseController {
 
 		if(!empty($flash_error)){
 	
-			return Redirect::route('backlog-add')
+			return Redirect::to('/backlog/add')
 				->with('error', '<ul><li>'.implode('</li><li>',$flash_error).'</li></ul>')
 				->withInput();
 	
@@ -176,7 +176,7 @@ class BacklogController extends \BaseController {
 			$vote->user_id = Auth::user()->id;
 			$newLink->votes()->save($vote);
 
-			return Redirect::route('backlog')
+			return Redirect::to('/backlog')
 				->with('status', 'Link added succesfully');
 		}
 	}
@@ -209,7 +209,7 @@ class BacklogController extends \BaseController {
 
 		if(!empty($flash_error)){
 	
-			return Redirect::route('backlog')
+			return Redirect::to('/backlog')
 				->with('error', '<ul><li>'.implode('</li><li>',$flash_error).'</li></ul>')
 				->withInput();
 	
@@ -222,7 +222,7 @@ class BacklogController extends \BaseController {
 
 			Queue::push('MagazineController@update_frontpage_cache','');
 
-			return Redirect::route('backlog');
+			return Redirect::to('/backlog');
 		}
 	}
 }

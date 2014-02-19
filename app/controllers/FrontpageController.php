@@ -1,8 +1,8 @@
 <?php
 
-class MagazineController extends \BaseController {
+class FrontpageController extends \BaseController {
 
-	public function index()
+	public function getIndex()
 	{
 		$links = $this->get_links_frontpage();
 
@@ -13,7 +13,7 @@ class MagazineController extends \BaseController {
 		}
 	}
 
-	public function about()
+	public function getAbout()
 	{
 		$all_users = User::all();
 		foreach($all_users as $user)
@@ -25,7 +25,7 @@ class MagazineController extends \BaseController {
 		return View::make('themes.magazine.about')->with('users',$users);
 	}
 
-	public function profile($username)
+	public function getProfile($username)
 	{
 		$user = User::where('username', '=', $username)->take(1)->get();
 		$user = $user->toArray();
@@ -34,7 +34,7 @@ class MagazineController extends \BaseController {
 		return View::make('themes.magazine.profile')->with('user',$user);
 	}
 
-	public function detail($link_id)
+	public function getDetail($link_id)
 	{
 		$link = $this->get_link_details($link_id);
 
@@ -47,6 +47,8 @@ class MagazineController extends \BaseController {
 		}
 		
 	}
+
+// --------------------------------------- 
 
 	public function update_frontpage_cache($data)
 	{

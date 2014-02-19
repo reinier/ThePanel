@@ -38,7 +38,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						@if(Auth::check())
 							<li class="navbar-right"><a href="/logout">Log uit</a></li>
-							<li class="{{ Request::is('yourbookmarklet') ? 'active' : '' }} navbar-right"><a href="/yourbookmarklet">Jouw bookmarklet</a></li>
+							<li class="{{ Request::is('yourbookmarklet') ? 'active' : '' }} navbar-right"><a href="/bookmarklet">Jouw bookmarklet</a></li>
 							<li class="{{ Request::is('edit') ? 'active' : '' }}"><a href="/edit">Instellingen</a></li>
 						@endif
 

@@ -15,7 +15,7 @@
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
-			<a class="{{ Request::is('/') ? 'active' : '' }} brandname" href="/"><strong>{{ Config::get('site.title'); }}</strong></a> &nbsp;&nbsp;&nbsp; <a href="/about">Over {{ Config::get('site.title'); }}</a>
+			<a class="{{ Request::is('/') ? 'active' : '' }} brandname" href="/"><strong>{{ Config::get('site.title'); }}</strong></a> &nbsp;&nbsp;&nbsp; <a href="/frontpage/about">Over {{ Config::get('site.title'); }}</a>
 		</div>
 	</nav>
 

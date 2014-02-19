@@ -73,8 +73,6 @@
 		@yield('content')
 	</div> <!-- /container -->
 	
-	
-
 	<script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

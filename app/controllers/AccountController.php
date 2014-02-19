@@ -10,17 +10,14 @@ class AccountController extends \BaseController {
 
 	**************************************/ 
 	
-	// function __construct() {
- //        $this->beforeFilter('auth', array('except' => array('show')));
- //    }
+	function __construct() {
+        $this->beforeFilter('auth', array('except' => array('getLogin','postLogin','getActivate')));
+        $this->beforeFilter('admin', array('only' => array('getRegister','postRegister')));
+    }
 
 	// POST and GET
-	public function register()
+	public function getRegister()
 	{
-		if($_SERVER['REQUEST_METHOD'] == 'POST'){
-			return $this->add();
-		}
-		
 		$oldInput = Input::old();
 		
 		if(empty($oldInput['name'])){
@@ -39,12 +36,8 @@ class AccountController extends \BaseController {
 	}
 	
 	// POST and GET
-	public function login()
+	public function getLogin()
 	{
-		if($_SERVER['REQUEST_METHOD'] == 'POST'){
-			return $this->authenticate();
-		}
-		
 		$oldInput = Input::old();
 		if(empty($oldInput['username'])){
 			$oldInput['username'] = '';
@@ -53,22 +46,18 @@ class AccountController extends \BaseController {
 		return View::make('thepanel.account.login')->with('oldInput', $oldInput);
 	}
 	
-	public function show()
+	public function getShow()
 	{
 		return View::make('thepanel.account.account');
 	}
 	
 	// POST and GET
-	public function edit()
-	{
-		if($_SERVER['REQUEST_METHOD'] == 'POST'){
-			return $this->update();
-		}
-		
+	public function getEdit()
+	{	
 		return View::make('thepanel.account.edit');
 	}
 	
-	public function activate($publichash)
+	public function getActivate($publichash)
 	{
 		$userWithPublicHash = User::whereRaw('publichash = ? AND activated = 0', array($publichash))->get();
 		
@@ -81,17 +70,17 @@ class AccountController extends \BaseController {
 			
 			Auth::login($activateUser);
 			
-			return Redirect::route('account')->with('status', 'You are successfully logged in.');
+			return Redirect::to('/backlog/list')->with('status', 'You are successfully logged in.');
 			
 		} else {
 			App::abort(404, 'Page not found');
 		}
 	}
 	
-	public function logout()
+	public function getLogout()
 	{
 		Auth::logout();
-		return Redirect::route('home')->with('status', 'You are successfully logged out.');
+		return Redirect::to('/')->with('status', 'You are successfully logged out.');
 	}
 	
 	/**************************************
@@ -102,7 +91,7 @@ class AccountController extends \BaseController {
 
 	**************************************/ 
 	
-	public function add()
+	public function postRegister()
 	{
 		$flash_error = array();
 		
@@ -152,7 +141,7 @@ class AccountController extends \BaseController {
 		/* Process errors or add data to database */
 		if(!empty($flash_error)){
 	
-			return Redirect::route('register')
+			return Redirect::to('/account/register')
 				->with('error', '<ul><li>'.implode('</li><li>',$flash_error).'</li></ul>')
 				->withInput();
 	
@@ -183,23 +172,23 @@ class AccountController extends \BaseController {
 			    $message->to($newUser->email, $newUser->name)->subject('Activate your account');
 			});
 			
-			return Redirect::route('home')
+			return Redirect::to('/')
 				->with('status', 'We have sent you an activation link to '.$newUser->email);
 		}
 	}
 	
-	public function update()
+	public function postEdit()
 	{
 		$updateUser = User::find(Auth::user()->id);
 		$updateUser->name 	= Input::get('name');
 		$updateUser->bio 	= Input::get('bio');
 		$updateUser->save();
 
-		return Redirect::route('edit')
+		return Redirect::to('/account/edit')
 				->with('status', 'Your information is succesfully saved');
 	}
 	
-	public function authenticate()
+	public function postLogin()
 	{
 		$userInput = array(
 			'username' 	=> Input::get('username'),
@@ -228,7 +217,7 @@ class AccountController extends \BaseController {
 		}
         
 		// authentication failure! lets go back to the login page
-		return Redirect::route('login')
+		return Redirect::to('/account/login')
 			->with('error', 'You are not logged in.')
 			->withInput();
 	}

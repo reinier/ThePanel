@@ -68,9 +68,9 @@ class BacklogController extends \BaseController {
 
 	public function getAdd()
 	{
-		if($_SERVER['REQUEST_METHOD'] == 'POST'){
-			return $this->create();
-		}
+		// if($_SERVER['REQUEST_METHOD'] == 'POST'){
+		// 	return $this->create();
+		// }
 		
 		// Default values
 		$theInput['title'] = '';
@@ -117,17 +117,6 @@ class BacklogController extends \BaseController {
 		
 		return View::make('thepanel.backlog.add')->with('theInput', $theInput);
 	}
-
-	public function postVote()
-	{
-		if($_SERVER['REQUEST_METHOD'] == 'POST'){
-			return $this->create_vote();
-		}
-	}
-
-	/**************************************
-	Database interaction
-	**************************************/ 
 
 	public function postAdd()
 	{
@@ -181,7 +170,7 @@ class BacklogController extends \BaseController {
 		}
 	}
 
-	public function create_vote()
+	public function postVote()
 	{
 		$flash_error = array();
 

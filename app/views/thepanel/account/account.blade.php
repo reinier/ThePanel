@@ -11,7 +11,7 @@
 @section('content')
 		
 	@if(Auth::check())
-		<p><a href="/logout">Logout {{ Auth::user()->username }}</a></p>
+		<p><a href="/account/logout">Logout {{ Auth::user()->username }}</a></p>
 	@endif
 	
 @stop

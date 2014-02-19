@@ -10,7 +10,7 @@
 
 @section('content')
 	
-{{ Form::open(array('url' => '/register', 'class' => 'rei-form')) }}
+{{ Form::open(array('url' => '/account/register', 'class' => 'rei-form')) }}
 <fieldset>
 	
 	<div class="form-group">

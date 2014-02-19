@@ -10,7 +10,7 @@
 
 @section('content')
 	
-{{ Form::open(array('url' => '/edit', 'class' => 'rei-form')) }}
+{{ Form::open(array('url' => '/account/edit', 'class' => 'rei-form')) }}
 <fieldset>
 	<p><label for="name">Your name</label>
 	<input class="form-control" type="text" name="name" value="{{ Auth::user()->name }}">

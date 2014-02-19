@@ -37,13 +37,13 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						@if(Auth::check())
-							<li class="navbar-right"><a href="/logout">Log uit</a></li>
-							<li class="{{ Request::is('yourbookmarklet') ? 'active' : '' }} navbar-right"><a href="/bookmarklet">Jouw bookmarklet</a></li>
-							<li class="{{ Request::is('edit') ? 'active' : '' }}"><a href="/edit">Instellingen</a></li>
+							<li class="navbar-right"><a href="/account/logout">Log uit</a></li>
+							<li class="{{ Request::is('bookmarklet') ? 'active' : '' }} navbar-right"><a href="/bookmarklet">Jouw bookmarklet</a></li>
+							<li class="{{ Request::is('account/edit') ? 'active' : '' }}"><a href="/account/edit">Instellingen</a></li>
 						@endif
 
 						@if(Auth::check() && Auth::user()->role == 'admin')
-							<li class="navbar-right {{ Request::is('register') ? 'active' : '' }}"><a href="/register">Nieuwe gebruiker</a></li>
+							<li class="navbar-right {{ Request::is('account/register') ? 'active' : '' }}"><a href="/account/register">Nieuwe gebruiker</a></li>
 						@endif
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -75,7 +75,7 @@
 	
 	
 
-	<script src="/bower_components/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

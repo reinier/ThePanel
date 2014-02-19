@@ -47,14 +47,14 @@
 					<a href="/backlog/list">Backlog &raquo;</a>
 				@endif
 				@if(!Auth::check())
-					<a href="/login">Login &raquo;</a>
+					<a href="/account/login">Login &raquo;</a>
 				@endif
 				</p>
 			</footer>
 	</div> <!-- /container -->
 	
 
-	<script src="/bower_components/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

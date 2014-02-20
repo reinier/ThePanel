@@ -7,6 +7,9 @@ a.the_link {
   text-decoration: underline;
   color: #fc6838; }
 
+h3 {
+  font-size: 1.3em; }
+
 .link-details-link a {
   color: #2ea9d9; }
 

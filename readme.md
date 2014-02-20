@@ -1,6 +1,6 @@
 # The Panel
 
-See The Panel in action on [Hidiyo](http://hidiyo.com).
+See The Panel in action on [Burrrst](http://burrrst.nl) (mostly dutch).
 
 [The Panel](http://thepanel.io) is a PHP webservice that allows you to curate links with a group of people. The links only appear in public when a certain amount of votes are being given to a link. 
 

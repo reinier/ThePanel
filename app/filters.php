@@ -36,7 +36,7 @@ App::after(function($request, $response)
 Route::filter('auth', function()
 {
     if (Auth::guest()){
-		return Redirect::route('login')
+		return Redirect::route('account/login')
 			->with('error', 'You must be logged in to view this page!');
 	}
 });
@@ -62,7 +62,7 @@ Route::filter('auth.basic', function()
 Route::filter('guest', function()
 {
     if (Auth::check()){
-		return Redirect::route('account')
+		return Redirect::route('backlog')
 			->with('status', 'You are already logged in!');    	
     }
 
@@ -72,11 +72,11 @@ Route::filter('admin', function()
 {   
 	if(Auth::guest())
 	{
-		return Redirect::route('login')->with('error', 'You must be logged in to view this page!');
+		return Redirect::route('account/login')->with('error', 'You must be logged in to view this page!');
 	}
 	elseif(Auth::user()->role != 'admin')
 	{
-		return Redirect::route('account')->with('error', 'You must be an admin in to view this page!');
+		return Redirect::route('backlog')->with('error', 'You must be an admin in to view this page!');
 	}
 });
 

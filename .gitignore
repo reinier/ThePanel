@@ -9,3 +9,7 @@ public/bower_components/*
 public/npm-debug.log
 bootstrap/start.php
 app/database/seeds/UsersTableSeeder.php
+app/views/themes/*
+!app/views/themes/magazine/*
+public/themes/*
+!public/themes/magazine/*

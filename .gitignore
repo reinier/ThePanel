@@ -13,3 +13,5 @@ app/views/themes/*
 !app/views/themes/magazine/*
 public/themes/*
 !public/themes/magazine/*
+Gruntfile.js
+package.json

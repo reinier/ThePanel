@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
-	grunt.registerTask('watchreload', ['watch:css', 'watch:reload']);
+	grunt.registerTask('watchreload', ['watch']);
 	grunt.registerTask('default',['watch:css']);
 
 	grunt.registerTask("reload", "reload Chrome on OS X",

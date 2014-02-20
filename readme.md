@@ -12,7 +12,9 @@ Visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel) for todo
 
 ## Setup
 
-**Tip:** You can use this Vagrant setup that is specifically created for The Panel: [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel)
+- Make a copy of `bootstrap/start.default.php` and name it `bootstrap/start.php`
+
+**Tip:** You can use this Vagrant setup that is specifically created for The Panel: [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel) — if you are going to use it, make sure to run `composer` from inside the vagrant server.
 
 ### Composer
 
@@ -25,12 +27,12 @@ Visit [The Panel Trello Board](https://trello.com/b/BdRVX1XM/the-panel) for todo
 
 ### Config
 
-- Rename `bootstrap/start.default.php` to `bootstrap/start.php` and edit the environment to your needs, like a development environment (`'development' => array('packer-virtualbox'),` can be used with [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel))
+- Edit `bootstrap/start.php` with the environment(s) you need, like a development environment (`'development' => array('packer-virtualbox'),` can be used with [vagrant-setup-for-thepanel](https://github.com/reinier/vagrant-setup-for-thepanel))
 - Change config files to your needs (`app/config/*`) like setting up your development environment by adding an environment directory with specific configurations.
 
 ### Setup database
 
-Check the seed file (`app/database/seeds/UsersTableSeeder.default.php`) for your first (admin) user credentials (be sure to provide a real email address) and rename the file to `UsersTableSeeder.php`.
+Check the seed file (`app/database/seeds/UsersTableSeeder.default.php`) for your first (admin) user credentials (be sure to provide a real email address) and copy the file to `UsersTableSeeder.php`.
 
 Now run the database migrations:
 

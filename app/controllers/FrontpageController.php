@@ -2,14 +2,19 @@
 
 class FrontpageController extends \BaseController {
 
+	public function __construct()
+	{
+		$this->theme = Config::get('site.theme');  
+	}
+
 	public function getIndex()
 	{
 		$links = $this->get_links_frontpage();
 
 		if(!empty($links)){
-			return View::make('themes.magazine.index')->with('links',$links);
+			return View::make('themes.'.$this->theme.'.index')->with('links',$links);
 		} else {
-			return View::make('themes.magazine.empty');
+			return View::make('themes.'.$this->theme.'.empty');
 		}
 	}
 
@@ -22,7 +27,7 @@ class FrontpageController extends \BaseController {
 			$users[$user['id']]['username'] = $user['username'];
 		}
 
-		return View::make('themes.magazine.about')->with('users',$users);
+		return View::make('themes.'.$this->theme.'.about')->with('users',$users);
 	}
 
 	public function getProfile($username)
@@ -31,7 +36,7 @@ class FrontpageController extends \BaseController {
 		$user = $user->toArray();
 		$user = $user[0];
 		$user['bio'] = Markdown::string($user['bio']);
-		return View::make('themes.magazine.profile')->with('user',$user);
+		return View::make('themes.'.$this->theme.'.profile')->with('user',$user);
 	}
 
 	public function getDetail($link_id)
@@ -43,7 +48,7 @@ class FrontpageController extends \BaseController {
 			return Redirect::route('home')->with('error', 'Hier is geen link te vinden.');
 
 		} else {
-			return View::make('themes.magazine.detail')->with('link',$link);
+			return View::make('themes.'.$this->theme.'.detail')->with('link',$link);
 		}
 		
 	}

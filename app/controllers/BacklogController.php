@@ -209,7 +209,7 @@ class BacklogController extends \BaseController {
 			$link = Link::find($link_id);
 			$vote = $link->votes()->save($vote);
 
-			Queue::push('MagazineController@update_frontpage_cache','');
+			Queue::push('FrontpageController@update_frontpage_cache','');
 
 			return Redirect::to('/backlog');
 		}

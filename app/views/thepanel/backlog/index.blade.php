@@ -9,13 +9,13 @@
 @stop
 
 @section('content')
-	<p class="add-to-backlog"><a href="/backlog/add">+ Voeg handmatig een link toe</a></p>
+	<p class="add-to-backlog"><a href="/backlog/add">+ @lang('thepanel.addlink')</a></p>
 	<p class="sort-backlog">
-		<em>Sorteer op:</em> 
+		<em>@lang('thepanel.sortby'):</em> 
 		@if(Request::is('backlog/list/votes'))
-			stemmen | <a href="/backlog/list">binnenkomst</a>
+			{{ trans('thepanel.votes') }} | <a href="/backlog/list">{{ trans('thepanel.incoming') }}</a>
 		@else
-			<a href="/backlog/list/votes">stemmen</a> | binnenkomst
+			<a href="/backlog/list/votes">{{ trans('thepanel.votes') }}</a> | {{ trans('thepanel.incoming') }}
 		@endif
 		
 	</p>

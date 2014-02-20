@@ -31,18 +31,18 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						@if(Auth::check())
-						<li class="{{ Request::is('backlog/*')||Request::is('backlog') ? 'active' : '' }}"><a href="/backlog">Backlog</a></li>
+						<li class="{{ Request::is('backlog/*')||Request::is('backlog') ? 'active' : '' }}"><a href="/backlog">@lang('thepanel.backlog')</a></li>
 						@endif
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						@if(Auth::check())
-							<li class="navbar-right"><a href="/account/logout">Log uit</a></li>
-							<li class="{{ Request::is('bookmarklet') ? 'active' : '' }} navbar-right"><a href="/bookmarklet">Jouw bookmarklet</a></li>
-							<li class="{{ Request::is('account/edit') ? 'active' : '' }}"><a href="/account/edit">Instellingen</a></li>
+							<li class="navbar-right"><a href="/account/logout">@lang('thepanel.logout')</a></li>
+							<li class="{{ Request::is('bookmarklet') ? 'active' : '' }} navbar-right"><a href="/bookmarklet">@lang('thepanel.yourbookmarklet')</a></li>
+							<li class="{{ Request::is('account/edit') ? 'active' : '' }}"><a href="/account/edit">@lang('thepanel.settings')</a></li>
 						@endif
 
 						@if(Auth::check() && Auth::user()->role == 'admin')
-							<li class="navbar-right {{ Request::is('account/register') ? 'active' : '' }}"><a href="/account/register">Nieuwe gebruiker</a></li>
+							<li class="navbar-right {{ Request::is('account/register') ? 'active' : '' }}"><a href="/account/register">@lang('thepanel.newuser')</a></li>
 						@endif
 					</ul>
 				</div><!-- /.navbar-collapse -->

@@ -210,7 +210,7 @@ class AccountController extends \BaseController {
 		}
 
 		// Try with email address
-		if (Auth::attempt(array('email' => $userInput['username'], 'password' => $userInput['password'])))
+		if (Auth::attempt(array('email' => $userInput['username'], 'password' => $userInput['password']),$remember))
 		{
 		    return Redirect::to('backlog/list')
 				->with('status', 'You are successfully logged in.');

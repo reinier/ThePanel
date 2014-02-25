@@ -74,6 +74,12 @@ ul#published-links {
 
 			img {
 				border: 2px solid $primary-border-color;
+				width: 32px;
+				height: auto;
+
+				&.img-circle-large {
+					width: 48px;
+				}
 			}
 
 		}

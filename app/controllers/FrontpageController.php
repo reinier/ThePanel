@@ -78,12 +78,14 @@ class FrontpageController extends \BaseController {
 			    	
 			    	if($link->user->username == $vote->user->username)
 			    	{
-			    		$size = '48';	
+			    		$size = '96';
+			    		$css_class= 'img-circle-large';
 			    	} else {
-			    		$size = '32';
+			    		$size = '64';
+			    		$css_class= 'img-circle-regular';
 			    	}
 
-			    	$gravatar = '<img src="http://www.gravatar.com/avatar/'.md5(strtolower(trim($vote->user->email))).'?s='.$size.'&d=identicon" title="'.$vote->user->name.'" class="img-circle">';
+			    	$gravatar = '<img src="http://www.gravatar.com/avatar/'.md5(strtolower(trim($vote->user->email))).'?s='.$size.'&d=identicon" title="'.$vote->user->name.'" class="img-circle '.$css_class.'">';
 			    	$votes[] = $gravatar;
 
 			    	$vote_dates[] = $vote->created_at;
